@@ -1,4 +1,4 @@
-package ca.javateacher.loancalculator.model;
+package ca.tetervak.loancalculator.model;
 
 import java.io.Serializable;
 

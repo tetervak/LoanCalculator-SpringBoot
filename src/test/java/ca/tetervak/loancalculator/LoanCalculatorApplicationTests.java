@@ -1,4 +1,4 @@
-package ca.javateacher.loancalculator;
+package ca.tetervak.loancalculator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

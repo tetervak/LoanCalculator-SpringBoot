@@ -1,8 +1,8 @@
-package ca.javateacher.loancalculator.controller;
+package ca.tetervak.loancalculator.controller;
 
-import ca.javateacher.loancalculator.model.Loan;
-import ca.javateacher.loancalculator.model.LoanForm;
-import ca.javateacher.loancalculator.validator.LoanFormValidator;
+import ca.tetervak.loancalculator.model.Loan;
+import ca.tetervak.loancalculator.model.LoanForm;
+import ca.tetervak.loancalculator.validator.LoanFormValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -25,14 +25,14 @@ public class LoanCalcController {
             binder.setValidator(new LoanFormValidator());
     }
 
-    @RequestMapping(value={"/","/Input.do"})
+    @RequestMapping(value={"/","/input"})
     public ModelAndView input(){
         // make the object available to the Input page and show the page
         logger.trace("Showing the first input page.");
         return new ModelAndView("Input","form", new LoanForm());
     }
 
-    @RequestMapping("/Calculate.do")
+    @RequestMapping("/process")
     public ModelAndView calculate(
             @Validated @ModelAttribute(name="form") LoanForm form,
             BindingResult bindingResult){

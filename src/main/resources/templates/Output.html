@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="loan" type="ca.javateacher.loancalculator.model.Loan"*/-->
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -37,7 +36,7 @@
               th:text="${#numbers.formatDecimal(loan.totalPayment -loan.loanAmount,1,2,'POINT')}">87.53</span>
     </p>
     <p>
-        <a th:href="@{Input.do}" href="Input.html">Back to inputs</a>
+        <a th:href="@{input}" href="Input.html">Back to inputs</a>
     </p>
 </main>
 </body>
